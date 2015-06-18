@@ -48,7 +48,7 @@ namespace HtmlMinifyMiddleware
                     return _inner.Write;
                 }
 
-                var inputBuffer = new byte[4096]; //4K + 4 bytes for trailing truncated UTF-8 char
+                var inputBuffer = new byte[4096];
                 var memoryStream = new MemoryStream(inputBuffer); // Should be pooled
                 int inputBufferOffset = 0;
                 var outputCharBuffer = new char[Encoding.UTF8.GetMaxCharCount(4096)];
