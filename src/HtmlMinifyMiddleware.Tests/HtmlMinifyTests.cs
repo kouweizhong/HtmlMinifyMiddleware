@@ -84,6 +84,30 @@
         }
 
         [Fact]
+        public async Task Should_minify_html_less_than_buffer_size()
+        {
+            var s = new string(' ', 10);
+            string html = "   <html>" + Environment.NewLine + s + "</html>";
+
+            var appfunc = HtmlMinify.Middleware(async env =>
+            {
+                var context = new OwinContext(env);
+                context.Response.ContentType = "text/html";
+                var bytes = Encoding.UTF8.GetBytes(html);
+                await context.Response.WriteAsync(bytes);
+            });
+
+            var handler = new OwinHttpMessageHandler(appfunc);
+            using (var client = new HttpClient(handler))
+            {
+                var response = await client.GetAsync("http://localhost/");
+                var body = await response.Content.ReadAsStringAsync();
+
+                body.Should().Be(@"<html> </html>");
+            }
+        }
+
+        [Fact]
         public async Task Should_not_minify_plain_text()
         {
             string html = @"   <html>
