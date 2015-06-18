@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlMinifyMiddleware", "HtmlMinifyMiddleware\HtmlMinifyMiddleware.csproj", "{CBDAC460-03F6-400B-AD0F-DEA94F36F603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlMinifyMiddleware.Tests", "HtmlMinifyMiddleware.Tests\HtmlMinifyMiddleware.Tests.csproj", "{AB8BA147-6BA1-4870-A369-68EF3DC573AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBDAC460-03F6-400B-AD0F-DEA94F36F603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDAC460-03F6-400B-AD0F-DEA94F36F603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDAC460-03F6-400B-AD0F-DEA94F36F603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDAC460-03F6-400B-AD0F-DEA94F36F603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8BA147-6BA1-4870-A369-68EF3DC573AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8BA147-6BA1-4870-A369-68EF3DC573AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8BA147-6BA1-4870-A369-68EF3DC573AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8BA147-6BA1-4870-A369-68EF3DC573AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
